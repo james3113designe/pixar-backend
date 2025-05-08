@@ -35,9 +35,9 @@ export default async function handler(req, res) {
         prompt: 'Pixar style 3D portrait of a person or animal, clean background, ultra high detail, expressive features, large eyes, smooth skin or fur, realistic proportions, friendly look, cinematic lighting, accurate facial details, subtle texture, Disney Pixar animation style',
 negative_prompt: 'exaggerated cartoon, surreal, low resolution, blurry, distorted features, unrealistic anatomy, creepy, extra limbs',
 guidance_scale: 6.5,
-prompt_strength: 0.5,
+prompt_strength: 0.45,
 high_noise_frac: 0.3,
-lora_scale: 0.8
+lora_scale: 0.7
 
       }
     })
