@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      version: 'db21e45b-f2bc-46f3-a1c7-5b2e6634fdb9',
+      version: '81f8bbd3463056c8521eb528feb10509cc1385e2fabef590747f159848589048',
       input: {
         image: imageBase64,
         prompt: 'Pixar style 3D cartoon character, stylized soft fur, big expressive eyes, smooth features, simplified texture, rounded nose and face, warm lighting, rendered like Disney or Pixar movie',
