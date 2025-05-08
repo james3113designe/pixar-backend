@@ -32,12 +32,13 @@ export default async function handler(req, res) {
       version: '81f8bbd3463056c8521eb528feb10509cc1385e2fabef590747f159848589048',
       input: {
         image: imageBase64,
-        prompt: 'Pixar style 3D cartoon character, stylized soft fur, big expressive eyes, smooth features, simplified texture, rounded nose and face, warm lighting, rendered like Disney or Pixar movie',
-        negative_prompt: 'realistic fur, photorealistic, blurry texture, lowres, deformities',
-        guidance_scale: 7.5,
-        prompt_strength: 0.5,
-        high_noise_frac: 0.4,
-        lora_scale: 0.85
+        prompt: 'Pixar style 3D portrait of a person or animal, clean background, ultra high detail, expressive features, large eyes, smooth skin or fur, realistic proportions, friendly look, cinematic lighting, accurate facial details, subtle texture, Disney Pixar animation style',
+negative_prompt: 'exaggerated cartoon, surreal, low resolution, blurry, distorted features, unrealistic anatomy, creepy, extra limbs',
+guidance_scale: 6.5,
+prompt_strength: 0.45,
+high_noise_frac: 0.3,
+lora_scale: 0.6
+
       }
     })
   });
