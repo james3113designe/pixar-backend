@@ -1,6 +1,8 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
+  console.log("API endpoint hit");
+
   res.setHeader("Access-Control-Allow-Origin", "https://thepearlgirl.art");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
