@@ -34,8 +34,8 @@ export default async function handler(req, res) {
         image: imageBase64,
         prompt: 'Pixar style 3D cartoon character, stylized soft fur, big expressive eyes, smooth features, simplified texture, rounded nose and face, warm lighting, rendered like Disney or Pixar movie',
         negative_prompt: 'realistic fur, photorealistic, blurry texture, lowres, deformities',
-        guidance_scale: 8.5,
-        prompt_strength: 0.7,
+        guidance_scale: 7.5,
+        prompt_strength: 0.5,
         high_noise_frac: 0.4,
         lora_scale: 0.85
       }
