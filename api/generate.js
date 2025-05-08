@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
-  console.log("API endpoint hit");
+  console.log("✅ API endpoint hit");
 
   res.setHeader("Access-Control-Allow-Origin", "https://thepearlgirl.art");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -16,6 +16,11 @@ export default async function handler(req, res) {
   }
 
   const { imageBase64 } = req.body;
+  if (!imageBase64) {
+    return res.status(400).json({ error: 'No image provided' });
+  }
+
+  console.log("📤 Sending request to Replicate...");
 
   const response = await fetch('https://api.replicate.com/v1/predictions', {
     method: 'POST',
@@ -37,7 +42,14 @@ export default async function handler(req, res) {
     })
   });
 
+  if (!response.ok) {
+    const errText = await response.text();
+    console.error("❌ Replicate request failed:", errText);
+    return res.status(500).json({ error: 'Replicate request failed', detail: errText });
+  }
+
   const prediction = await response.json();
+  console.log("✅ Prediction started:", prediction.id);
 
   let result;
   while (!result) {
